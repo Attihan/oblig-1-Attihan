@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobiletter</title>
+    <style>
+
+        div {
+            border: 1px solid blue;
+            max-width: fit-content;
+            padding-bottom: 20px;
+            padding: 10px;
+        }
+
+        #antall{
+            max-width: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #velgFilm{
+            min-width: 175px;
+        }
+
+
+
+        h3{
+            margin-bottom: 0px;
+            font-size: medium;
+        }
+
+
+
+    </style>
+
+    <script src="java.js"></script>
+
+</head>
+
+<body>
+
+<div>
+
+    <h1>Bestilling av kinobiletter</h1>
+
+    <table id="Film">
+
+
+        <tr>
+            Velg film:
+            <select id="velgFilm" onchange="choose()">
+                <option selected disabled>Velg film her</option>
+                <option value="Grusomme Meg">Grusomme Meg</option>
+                <option value="Shrek">Shrek</option>
+                <option value="Sinister">Sinister</option>
+            </select>
+            <td><span id="validerFilm" style="display: none;">Vennligst velg en film</span></td>
+        </tr>
+
+
+        <tr>
+            <td>Antall</td>
+            <td><input type="number" id="antall" min="1"></td>
+            <td><span id="validerAntall" style="display: none;">Vennligst fyll ut antall fra 0 til 50</span></td>
+        </tr>
+    </table>
+
+
+
+
+
+    <table>
+        <tr>
+            <td>Fornavn </td>
+            <td><input type="text" id="fornavn"></td>
+            <td><span id="validerFornavn" style="display: none;">Vennligst skriv inn fornavn</span></td>
+        </tr>
+
+        <tr>
+            <td>Etternavn</td>
+            <td><input type="text" id="etternavn"></td>
+            <td><span id="validerEtternavn" style="display: none;">Vennligst skriv inn etternavn</span></td>
+        </tr>
+
+        <tr>
+            <td>TelefonNr</td>
+            <td><input type="text" id="telefon"></td>
+            <td><span id="validerTelefon" style="display: none;">Vennligst skriv et telefonnummer</span></td>
+        </tr>
+
+        <tr>
+            <td>Epost</td>
+            <td><input type="email" id="email"></td>
+            <td><span id="validerEmail" style="display: none;">Vennligst skriv inn email</span></td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>
+                <button onclick="leggTilBetaling()" id="betaling">Kjøp bilett</button>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+    <h2>Alle bilettene</h2>
+
+    <table>
+        <tr>
+            <th>Film</th>
+            <th>Antall</th>
+            <th>Fornavn</th>
+            <th>Etternavn</th>
+            <th>TelefonNr</th>
+            <th>Email</th>
+        </tr>
+        <tbody id="arrayTabell" ></tbody>
+    </table>
+
+    <button id="slett" onclick="slettAlleBilettene()">Slett alle billettene</button>
+
+
+    <script src="java.js"></script>
+</div>
+
+
+</body>
+</html>
