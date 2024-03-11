@@ -109,7 +109,7 @@ function validering(){
         validerTelefon.style.display = "none";
     }
 
-    if (email.value === "" || /^.+@.+\..+$/.test(email) === "") {
+    if (email.value === "" || !/^.+@.+\..+$/.test(email.value)) {
         validerEmail.style.display = "inline";
         feil = true;
     } else {
