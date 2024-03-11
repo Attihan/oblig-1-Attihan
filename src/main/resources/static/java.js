@@ -109,12 +109,13 @@ function validering(){
         validerTelefon.style.display = "none";
     }
 
-    if (email.value === "") {
+    if (email.value === "" || /^.+@.+\..+$/.test(email) === "") {
         validerEmail.style.display = "inline";
         feil = true;
     } else {
         validerEmail.style.display = "none";
     }
+
 
 
     return !feil; //Dette returnerer variabelen feil som true
